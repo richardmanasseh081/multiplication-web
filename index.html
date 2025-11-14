@@ -153,14 +153,14 @@ function generateTable() {
     html += "</tr>";
 
     // Body rows
-    for (let i = start; i <= end; i++) {
-        html += "<tr>";
-        html += "<th>" + i + "</th>";
-        for (let j = start; j <= end; j++) {
-            html += "<td>" + (i * j) + "</td>";
-        }
-        html += "</tr>";
+for (let i = start; i <= end; i++) {
+    html += "<tr>";
+    html += "<th>" + i + "</th>";
+    for (let j = 1; j <= end; j++) {   // <-- FIXED HERE
+        html += "<td>" + (i * j) + "</td>";
     }
+    html += "</tr>";
+}
 
     html += "</table>";
 
